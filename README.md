@@ -1,4 +1,4 @@
-# HiHealth Kit demo
+# Health Kit demo
 
 ## Table of Contents
 
