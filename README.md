@@ -1,4 +1,4 @@
-# Health Kit demo
+# Health Kit Extented Demo
 
 ## Table of Contents
 
@@ -42,4 +42,4 @@ https://developer.huawei.com/consumer/cn/hms/huaweihealth
   <img src="home.jpg" width=400>
   
 ##  License
-   HiHealth kit demo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+HiHealth kit demo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
