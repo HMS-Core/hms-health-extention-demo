@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
- * [Introduction](#Introduction)
- * [Getting Started](#Getting Started)
- * [Supported Environments](#Supported Environments)
+ * [Introduction](#introduction)
+ * [Getting Started](#getting-started)
+ * [Supported Environments](#supported-environments)
  * [Result](#result)
- * [License](#License)
+ * [License](#license)
 
 
 ## Introduction
@@ -39,7 +39,7 @@ https://developer.huawei.com/consumer/cn/hms/huaweihealth
 * HUAWEI Health App 10.1.2.513 or later
 
 ## Result
-  <img src="home.jpg">
+  <img src="home.jpg" width=400>
   
 ##  License
    HiHealth kit demo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
