@@ -1,45 +1,42 @@
-# Health Kit Extented Demo
+# Extended Health Kit Demo
 
 ## Table of Contents
 
- * [Introduction](#introduction)
- * [Getting Started](#getting-started)
- * [Supported Environments](#supported-environments)
+ * [Introduction](#Introduction)
+ * [Getting Started](#Getting Started)
+ * [Supported Environments](#Supported Environments)
  * [Result](#result)
- * [License](#license)
+ * [License](#License)
 
 
 ## Introduction
-HUAWEI HiHealth Kit is an open service for sports & health capabilities provided by Huawei. Developers can access the HUAWEI HiHealth Kit Platform and obtain sports & health data by integrating HUAWEI HiHealth Kit.   
-HiHealth Kit demo code encapsulates APIs of the HUAWEI HiHealth Kit. It provides demo programs for your reference or usage.   
+Extended Health Kit is an open service for sports & health capabilities provided by Huawei. Developers can access the HUAWEI Health Kit Platform and obtain sports & health data by integrating Extended Health Kit. 
 
-Include these functions of HiHealth Kit:  
-1)  Authorization  
+Extended Health Kit Demo code encapsulates APIs of the Extended Health Kit. It provides demo programs for your reference or usage.   
 
-2)  Operate health and sport data  
-
-3)  Real time data register  
+Include these functions of Extended Health Kit:  
+1. Operate health and sport data.
+2. Real time data register.
 
 For more development details, please refer to the following link: 
-https://developer.huawei.com/consumer/cn/hms/huaweihealth
+https://developer.huawei.com/consumer/en/hms/huaweihealth
 
 ## Getting Started
 
-Before using HiHealth Kit demo code, check whether the IDE environment has been installed. 
+Before using Extended Health Kit Demo code, check whether the IDE environment has been installed. 
 1. Decompress the demo code package.    
 2. Copy the package into the IDE directory and import it into the IDE Tool.
-3. Press Sync Project with Gradle Files to ensure the development environment builds completed.
-
-For more development details, please refer to the following link: 
-https://developer.huawei.com/consumer/cn/hms/huaweihealth
+3. You should also generate a signing certificate fingerprint and add the certificate file to the project, and add configuration to build.gradle. See (https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/signing-fingerprint-0000001050071709-V5)
+4. The AndroidManifest.xml file configures the appid of the application.
+5. Press Sync Project with Gradle Files to ensure the development environment builds completed.
 
 ## Supported Environments
-* Android Studio 3.0 or later
+* Android Studio 3.6.1 or later
 * Java SDK 1.8 or later
-* HUAWEI Health App 10.1.2.513 or later
+* HUAWEI Health App 12.1.6.300 or later
 
 ## Result
-  <img src="home.jpg" width=400>
-  
+  <img src="home.jpg" width="50%">
+
 ##  License
-HiHealth kit demo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+   Extended Health Kit Demo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).

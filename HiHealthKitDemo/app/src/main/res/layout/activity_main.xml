@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,170 +19,148 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_click_11"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_signIn"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
-                    android:text="requestAuthorization" />
+                    android:text="signIn" />
 
                 <Button
-                    android:id="@+id/btn_click_12"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_getApiLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="getApiLevel"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_getGender"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
                     android:text="getGender" />
 
-            </LinearLayout>
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
                 <Button
-                    android:id="@+id/btn_click_13"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_getBirthday"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
                     android:text="getBirthday" />
 
-                <Button
-                    android:id="@+id/btn_click_21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:textAllCaps="false"
-                    android:text="getHeight" />
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_click_22"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_getHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="getHeight" />
+
+                <Button
+                    android:id="@+id/btn_getWeight"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
                     android:text="getWeight" />
 
-                <Button
-                    android:id="@+id/btn_click_23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:textAllCaps="false"
-                    android:text="queryStep" />
-
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_click_31"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_execQuery_Step"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
-                    android:text="count steps number " />
+                    android:text="execQuery(Step)" />
 
                 <Button
-                    android:id="@+id/btn_click_32"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_getCount_Step"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
-                    android:text="queryRunTrackData" />
+                    android:text="getCount(Step)" />
 
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_click_33"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_execQuery_Run"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
-                    android:text="queryWeightEx" />
+                    android:text="execQuery(RunTrack)" />
 
                 <Button
-                    android:id="@+id/btn_click_43"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_execQuery_Weight"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
-                    android:text="saveWeightEx" />
-
+                    android:text="execQuery(Weight)" />
 
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_click_42"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:textAllCaps="false"
-                    android:text="startRealTimeSportData" />
-                <Button
-                    android:id="@+id/btn_click_45"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:textAllCaps="false"
-                    android:text="stopRealTimeSportData" />
-            </LinearLayout>
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_click_41"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_startReadingHeartRate"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
                     android:text="startReadingHeartRate" />
+
                 <Button
-                    android:id="@+id/btn_click_44"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_stopReadingHeartRate"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
@@ -193,60 +168,182 @@
 
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btn_click_50"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:text="getApiLevel"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:id="@+id/btn_click_51"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:text="deleteWeightEx"
-                    android:textAllCaps="false" />
-
-            </LinearLayout>
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_click_52"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_saveSample_Weight"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="saveSample(Weight)" />
+
+                <Button
+                    android:id="@+id/btn_deleteSample_Weight"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="deleteSample(Weight)"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_saveSample_CoreSleep"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="saveSample(CoreSleep)" />
+
+                <Button
+                    android:id="@+id/btn_execQuery_CoreSleep"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="execQuery(CoreSleep)"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_registerSportData"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="registerSportData" />
+
+                <Button
+                    android:id="@+id/btn_unregisterSportData"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="unregisterSportData" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_startSport"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:text="startSport"
                     android:textAllCaps="false" />
 
                 <Button
-                    android:id="@+id/btn_click_53"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_stopSport"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:text="stopSport"
                     android:textAllCaps="false" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_click_54"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="paginationQuery"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_pauseSport"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="pauseSport"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn_resumeSport"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="resumeSport"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_startSportEx"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="startSportEx"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_sendDeviceControlinstruction"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="sendDeviceControlinstruction"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_getCount_pagination"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="getCount pagination"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_subscribedataEx"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="subscribedataEx(1000 steps)"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_unsubscribedataEx"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:text="unsubscribedataEx(1000 steps)"
                 android:textAllCaps="false" />
 
         </LinearLayout>
@@ -259,7 +356,10 @@
             android:layout_marginBottom="10dp"
             android:background="#C6E2FF"
             android:minLines="5"
-            android:padding="2dp"
+            android:paddingTop="2dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
             android:text="Test Result!" />
     </LinearLayout>
 

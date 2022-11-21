@@ -10,11 +10,12 @@ android {
             v2SigningEnabled true
         }
     }
-    compileSdkVersion 26
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.huawei.healthkit.demo"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion 23
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
     }
@@ -28,6 +29,10 @@ android {
     configurations {
         all*.exclude group: 'com.huawei.hihealthkit', module: 'app'
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 repositories {
@@ -37,7 +42,9 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.huawei.hihealth:hihealthkit:5.1.0.300'
+    implementation 'com.huawei.hihealth:hihealthkit:6.7.0.300'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.huawei.hms:hwid:5.0.5.300'
 }

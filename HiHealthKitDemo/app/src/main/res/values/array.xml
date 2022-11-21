@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--startSport method supported sport Types-->
+    <array name="sport_types_name">
+        <item>outdoor walking</item>
+        <item>outdoor running</item>
+        <item>outdoor cycling</item>
+        <item>indoor running (on a treadmill)</item>
+        <item>rowing machine</item>
+        <item>indoor cycling</item>
+        <item>elliptical machine</item>
+        <item>free training activities</item>
+    </array>
+</resources>
