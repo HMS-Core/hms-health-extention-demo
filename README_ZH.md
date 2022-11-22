@@ -25,8 +25,8 @@ https://developer.huawei.com/consumer/cn/hms/huaweihealth
 
 1. 解压缩示例代码包。
 2. 将代码包复制到IDE目录并将其导入IDE工具。
-3. 另外，需要生成签名证书指纹并将证书文件添加到项目中，然后将配置添加到build.gradle。详细信息(https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/signing-fingerprint-0000001050071709-V5)
-4. AndroidManifest.xml文件配置应用的appid。
+3. 另外，需要生成签名证书指纹并将证书文件添加到项目中，然后将配置添加到build.gradle。详细信息([应用证书指纹](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/signing-fingerprint-0000001059050363?ha_source=hms1)，[导入证书指纹、修改包名、配置JDK编译版本](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/change-0000001050170085))
+4. AppId信息：在应用的AndroidManifest.xml文件中添加在开发者联盟创建应用时生成的AppId信息。
 5. 点击“Sync Project with Gradle Files”，以确保开发环境构建完成。
 
 ## 环境要求
