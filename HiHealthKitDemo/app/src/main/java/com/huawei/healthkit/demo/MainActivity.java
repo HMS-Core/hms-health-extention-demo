@@ -779,7 +779,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 final StringBuilder sb = new StringBuilder();
                 final long endTime = System.currentTimeMillis();
-                final long startTime = 0; // 开始时间为0，可以查询全部数据
+                final long startTime = 0;
                 HiHealthDataQuery hiHealthDataQuery = new HiHealthDataQuery(HiHealthPointType.DATA_POINT_STRESS,
                     startTime, endTime, new HiHealthDataQueryOption());
                 HiHealthDataStore.getCount(mContext, hiHealthDataQuery, new ResultCallback() {
