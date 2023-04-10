@@ -61,7 +61,6 @@ import com.huawei.hihealthkit.data.HiHealthPointData;
 import com.huawei.hihealthkit.data.HiHealthSessionData;
 import com.huawei.hihealthkit.data.HiHealthSetData;
 import com.huawei.hihealthkit.data.store.HiHealthDataStore;
-import com.huawei.hihealthkit.data.store.HiRealTimeCallback;
 import com.huawei.hihealthkit.data.store.HiRealTimeListener;
 import com.huawei.hihealthkit.data.store.HiSportDataCallback;
 import com.huawei.hihealthkit.data.type.HiHealthPointType;
@@ -71,14 +70,14 @@ import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
 import com.huawei.hmf.tasks.Task;
 import com.huawei.hms.common.ApiException;
+import com.huawei.hms.support.account.AccountAuthManager;
+import com.huawei.hms.support.account.request.AccountAuthParams;
+import com.huawei.hms.support.account.request.AccountAuthParamsHelper;
+import com.huawei.hms.support.account.result.AuthAccount;
+import com.huawei.hms.support.account.service.AccountAuthService;
 import com.huawei.hms.support.api.entity.auth.Scope;
 import com.huawei.hms.support.hwid.HuaweiIdAuthAPIManager;
-import com.huawei.hms.support.hwid.HuaweiIdAuthManager;
-import com.huawei.hms.support.hwid.request.HuaweiIdAuthParams;
-import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper;
-import com.huawei.hms.support.hwid.result.AuthHuaweiId;
 import com.huawei.hms.support.hwid.result.HuaweiIdAuthResult;
-import com.huawei.hms.support.hwid.service.HuaweiIdAuthService;
 
 import com.google.gson.Gson;
 
@@ -299,6 +298,7 @@ public class MainActivity extends Activity {
                         combineResult(resultCode, gender);
                         if (resultCode == HiHealthError.SUCCESS) {
                             int value = (int) gender;
+                            Log.i(TAG, "getGender: " + value);
                         }
                     }
                 });
@@ -314,6 +314,7 @@ public class MainActivity extends Activity {
                         if (resultCode == HiHealthError.SUCCESS) {
                             // For example, "1978-05-20" would return 19780520
                             int value = (int) birthday;
+                            Log.i(TAG, "getBirthday: " + value);
                         }
                     }
                 });
@@ -328,6 +329,7 @@ public class MainActivity extends Activity {
                         combineResult(resultCode, height);
                         if (resultCode == HiHealthError.SUCCESS) {
                             int value = (int) height;
+                            Log.i(TAG, "getHeight: " + value);
                         }
                     }
                 });
@@ -968,7 +970,7 @@ public class MainActivity extends Activity {
                 Log.w(TAG, "wrong message, no need to deal");
                 return;
             }
-            byte[] signature = intent.getByteArrayExtra(HiHealthKitConstant.EVENT_SIGNATURE);
+//            byte[] signature = intent.getByteArrayExtra(HiHealthKitConstant.EVENT_SIGNATURE);
             // Compare the generated signature with the received signature. If they are the same, the message is correct. Otherwise, ignore the message.
             // Signature generation rule: type, subType, and openId are concatenated with underscores (_) in sequence. The result is then encrypted with secret using the HMAC-SHA256 algorithm.
             // Signature verification is ignored here.
@@ -1044,25 +1046,24 @@ public class MainActivity extends Activity {
         scopeList.add(new Scope(HiHealthAtomicScope.HEALTHKIT_STRESS_READ));
 
         // Configure authorization parameters.
-        HuaweiIdAuthParamsHelper authParamsHelper =
-            new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM);
-        HuaweiIdAuthParams authParams =
+        AccountAuthParamsHelper authParamsHelper = new AccountAuthParamsHelper();
+        AccountAuthParams authParams =
             authParamsHelper.setIdToken().setId().setAccessToken().setScopeList(scopeList).createParams();
 
-        // Initialize the HuaweiIdAuthService object.
-        final HuaweiIdAuthService authService = HuaweiIdAuthManager.getService(getApplicationContext(), authParams);
+        // Initialize the AccountAuthService object.
+        final AccountAuthService authService = AccountAuthManager.getService(getApplicationContext(), authParams);
 
         // Silent sign-in. If authorization has been granted by the current account, the authorization screen will not
         // display. This is an asynchronous method.
-        Task<AuthHuaweiId> authHuaweiIdTask = authService.silentSignIn();
+        Task<AuthAccount> silentSignInTask = authService.silentSignIn();
 
         // Add the callback for the call result.
-        authHuaweiIdTask.addOnSuccessListener(new OnSuccessListener<AuthHuaweiId>() {
+        silentSignInTask.addOnSuccessListener(new OnSuccessListener<AuthAccount>() {
             @Override
-            public void onSuccess(AuthHuaweiId huaweiId) {
+            public void onSuccess(AuthAccount authAccount) {
                 // The silent sign-in is successful.
                 Log.i(TAG, "silentSignIn success");
-                openId = huaweiId.openId;
+                openId = authAccount.getOpenId();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

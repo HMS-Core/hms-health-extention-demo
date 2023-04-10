@@ -20,8 +20,14 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+        }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -45,5 +51,5 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.huawei.hihealth:hihealthkit:6.7.0.300'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.huawei.hms:hwid:5.0.5.300'
+    implementation 'com.huawei.hms:hwid:6.7.0.300'
 }
